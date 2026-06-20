@@ -1,4 +1,4 @@
-# Extreme Value Pathways in Multi-Dimentional Space
+# Extreme Value Dependence Detection for Hyper-Dimentional Datasets
 
 This document describes the Pathways detection modelling workflow used in `project3` for Multi-Dimentional datasets. The pipeline uses empirical multivariate tail dependence coeffient to identify extreme value relationships and build feature datasets for forecasting.
 
