@@ -6,7 +6,7 @@ This document describes the Pathways detection modelling workflow used in `proje
 
 The pipeline is implemented primarily in:
 
-- `CHI` " core model class and graph construction methods
+- `CHI` : The class object and graph construction methods
 - `project3/Pazzeling_layers.py` — reshaping and dataset creation for lagged CHI outputs
 - `project3/Tasker.ipynb` — orchestration examples for model building and evaluation
 
@@ -150,7 +150,6 @@ The codebase depends on:
 - `tensorflow` (used elsewhere in notebook evaluation)
 
 ## Notes
-
 - The pipeline is tuned for spatial extreme-event analysis using empirical chi statistics.
 - The CHI graph uses lagged time relationships between grid cells.
 - The `Pazz` dataset is designed for spatiotemporal model input with multiple lag channels.
