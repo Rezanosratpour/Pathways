@@ -86,12 +86,11 @@ The function `build_models(fp_hdf, dir, lag_memory, type)` performs:
 Example:
 
 ```python
-fp_models = build_models(
-    fp_hdf='/path/to/IMERG_1deg_1day_Data_moved.hdf5',
-    dir='/path/to/output/folder',
-    lag_memory=[[1,1],[1,2],[2,1]],
-    type='real'
-)
+from CHI import CHI
+
+chi_model = CHI(Data, lat, lon , date,
+                 Start_date  = date[0]  , End_date  = date[-1], 
+                 land_indices= land_indices   )
 ```
 
 ### Creating a puzzled dataset
@@ -115,6 +114,9 @@ out = solve_pazzels(
     lag_memory=[[1,1],[1,2],[2,1]],
     of='/path/to/output/Pazz.h5'
 )
+
+chi_model.build_Graph_V2_parallel( lag = 1 , out_folder  = '/your output folder/' , percentile = 0.95 ) 
+
 ```
 
 ## Outputs
