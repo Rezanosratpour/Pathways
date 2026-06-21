@@ -91,6 +91,25 @@ from CHI import CHI
 chi_model = CHI(Data, lat, lon , date,
                  Start_date  = date[0]  , End_date  = date[-1], 
                  land_indices= land_indices   )
+
+chi_model.build_Graph_V2_parallel( lag = lag_0 , out_folder  = out_folder , percentile = 0.95 ) 
+
+chi_model.generate_max_path2( prcntile_threshold = 0.95 ,out_folder  = out_folder )
+
+```
+
+```python
+chi_model.explore_for_station_optimized( lat_st = -37.8136  , 
+                              lon_st =  144.9631  , 
+                              D = 3 , 
+                              lags  = [1 , 1 , 1 ]  ,
+                              Sampling_rates  = [1 , 0.01, 0.01  ] , 
+                              Percentile_sampling =0.99 , 
+                              out_folder  = out_folder , 
+                              delta = 0.01 , 
+                              tolerance = 0.001 ,  
+                              name = 'Melbourne')
+
 ```
 
 ### Creating a puzzled dataset
@@ -99,6 +118,7 @@ The function `solve_pazzels(fp_models, lag_memory, of)`:
 
 - Loads one model and merges additional CHI `H_memory`
 - Builds lagged datasets for each lag combination
+- use graph constrcuction for the 2-Dimentional tail depedence 
 - Finds common dates across all lag views
 - Concatenates channel features for each date
 - Saves the result as an HDF file with `X`, `Y`, and `date`
@@ -114,9 +134,6 @@ out = solve_pazzels(
     lag_memory=[[1,1],[1,2],[2,1]],
     of='/path/to/output/Pazz.h5'
 )
-
-chi_model.build_Graph_V2_parallel( lag = 1 , out_folder  = '/your output folder/' , percentile = 0.95 ) 
-
 ```
 
 ## Outputs
