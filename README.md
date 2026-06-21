@@ -12,15 +12,15 @@ $(T, H, W)$
 
 where:
 
-[T = \text{number of time steps}]
+$T = \text{number of time steps}]$
 
-[H = \text{height of the spatial grid}]
+$H = \text{height of the spatial grid}$
 
-[W = \text{width of the spatial grid}]
+$W = \text{width of the spatial grid}$
 
 The time lags are defined as a sequence of integer values:
 
-[\text{lags} = [l_0, l_1, \ldots, l_d]]
+$\text{lags} = [l_0, l_1, \ldots, l_d]$
  
 ## Overview
 
