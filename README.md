@@ -96,6 +96,11 @@ chi_model.build_Graph_V2_parallel( lag = lag_0 , out_folder  = out_folder , perc
 
 chi_model.generate_max_path2( prcntile_threshold = 0.95 ,out_folder  = out_folder )
 
+chi_model.find_optimum_k(k_range= , out_folder= )
+chi_model.opt_k = 
+chi_model.cluster(out_folder)
+chi_model.explore_hyper_dim(D = 3 , lags = lags , sampling_rates= , Percentile_sampling= , delta= )
+
 ```
 
 ```python
