@@ -1,7 +1,27 @@
-# Extreme Value Dependence Detection for Hyper-Dimentional Datasets
+# Extreme-Value Dependence Detection for Hyper-Dimensional Datasets
 
-This document describes the Pathways detection modelling workflow used in `project3` for Multi-Dimentional datasets. The pipeline uses empirical multivariate tail dependence coeffient to identify extreme value relationships and build feature datasets for forecasting.
+This document presents the pathway-detection modelling workflow for multi-dimensional datasets. The proposed pipeline uses an empirical multivariate tail-dependence coefficient to identify extreme-value relationships and generate feature datasets for forecasting applications.
 
+Pathways are detected across the study area using predefined time lags. The workflow also identifies homogeneous regions that share similar sources of extreme-value dependence. The analysis can be extended further in the spatial domain by applying consecutive time lags, allowing the roots and propagation structure of each extreme-value pattern to be detected.
+
+The framework is flexible and can also be applied using a station-based approach. In this mode, the algorithm searches the spatial domain of the dataset using specified time lags for a selected station, with the aim of identifying extreme-value pathways within the provided data extent.
+
+The input dataset is a time series of images with the following shape:
+
+[(T, H, W)]
+
+where:
+
+[T = \text{number of time steps}]
+
+[H = \text{height of the spatial grid}]
+
+[W = \text{width of the spatial grid}]
+
+The time lags are defined as a sequence of integer values:
+
+[\text{lags} = [l_0, l_1, \ldots, l_d]]
+ 
 ## Overview
 
 The pipeline is implemented primarily in:
