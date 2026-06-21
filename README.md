@@ -8,7 +8,7 @@ The framework is flexible and can also be applied using a station-based approach
 
 The input dataset is a time series of images with the following shape:
 
-[(T, H, W)]
+$(T, H, W)$
 
 where:
 
